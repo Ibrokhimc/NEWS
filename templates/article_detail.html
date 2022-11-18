@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="body12" style="background-image: linear-gradient(to bottom right, lightyellow, palegreen);">
+
+<main class="container" style=''>
+  <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+    <div class="col-md-6 px-0">
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="row g-3">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-oblique border-bottom">
+          <i class="fa-solid fa-newspaper"></i>  So'ngi Yangiliklar
+      </h3>
+
+      <article class="blog-post" >
+        <div class="">
+        <div class="album py-3 bg-light" >
+          <div class="container">
+
+
+
+
+
+                    <img style="height:500px; width:100%;" class="img-fluid" src="{{ articles.image.url }}"  alt="Responsive image">
+
+
+                  <h1>{{ articles.title }}</h1> <br>
+              <h5>Sana: {{ articles.updated }}</h5> <br>
+              <p><b>{{ articles.summary }}</b>></p> <br>
+
+                    <p>{{ articles.body }}</p>
+                <p>Mualif: {{ articles.author | title }}</p>
+
+
+                  </p>
+                  <p>
+
+             <div class="d-flex justify-content-between align-items-center">
+
+
+      </div>
+    </div>
+  </div>
+
+      </div>
+      </article>
+
+
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-light rounded">
+          <h4 class="fst-oblique">Biz haqimizda</h4>
+          <p class="mb-0">«iBO News» - Ўзбекистондаги энг фаол онлайн нашрлардан бири. Сайт ўз олдига Ўзбекистон ва жаҳонда рўй бераётган энг муҳим воқеа-ҳодисалар ҳақида тезкор, аниқ ва холис ахборот беришни мақсад қилиб қўйган.
+            Google Analytics маълумотларига кўра, сайтга ҳар куни 350 минг киши ташриф буюради.
+          </p>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-oblique">Yangiliklar</h4>
+          <ol class="list-unstyled mb-0">
+            {% for c in categories %}
+            <li><a style="font-family: sans-serif; color:" href="#">{{ c.name | title }}</a></li>
+            {% endfor %}
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-oblique">Ijtmoiy tarmoqlarda bizni kuzating</h4>
+          <ol class="list-unstyled">
+            <br>
+            <li><i class="fa-brands fa-github"></i>  <a href="#">GitHub</a></li>
+            <li><i class="fa-brands fa-telegram"></i>  <a href="#">Telegram</a></li>
+            <li><i class="fa-brands fa-facebook"></i>  <a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-3 col-md">
+            <small class="d-block mb-3 text-muted">&copy; 2021-2022</small>
+          </div>
+          <div class="col-3 col-md">
+            <h5>Features</h5>
+
+          </div>
+          <div class="col-3 col-md">
+            <h5>Resources</h5>
+          </div>
+          <div class="col-3 col-md">
+            <h5>About</h5>
+            </ul>
+          </div>
+          “KUN.UZ” saytida eʼlon qilingan materiallardan nusxa koʻchirish, tarqatish va boshqa shakllarda foydalanish faqat tahririyat yozma roziligi bilan amalga oshirilishi mumkin.
+Guvohnoma: №0987. Berilgan sanasi: 22.06.2015-yil. Muassis: “WEB EXPERT” MCHJ. Tahririyat manzili: 100043, Toshkent shahri, K. Yormatov koʻchasi, 12-uy. Elektron manzil: info@kun.uz.
+Saytda eʼlon qilinayotgan mualliflik maqolalarida keltirilgan fikrlar muallifga tegishli va ular Kun.uz tahririyati nuqtai nazarini ifoda etmasligi mumkin.
+Ⓣ - maqola va materiallarda qo‘yilgan mazkur belgi ularning tijorat va reklama huquqlari asosida eʼlon qilinganligini bildiradi.
+        </div>
+</footer>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}
